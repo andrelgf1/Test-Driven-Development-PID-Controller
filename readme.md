@@ -1,6 +1,6 @@
 # C++ Boilerplate
 [![Build Status](https://travis-ci.org/nakulpatel94/cpp-boilerplate-1.svg?branch=master)](https://travis-ci.org/nakulpatel94/cpp-boilerplate-1)
-[![Coverage Status](https://coveralls.io/repos/github/dpiet/cpp-boilerplate/badge.svg?branch=master)](https://coveralls.io/github/dpiet/cpp-boilerplate?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/nakulpatel94/cpp-boilerplate-1/badge.svg?branch=master)](https://coveralls.io/github/nakulpatel94/cpp-boilerplate-1?branch=master)
 ---
 
 ## Overview
