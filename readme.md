@@ -3,6 +3,11 @@
 [![Coverage Status](https://coveralls.io/repos/github/nakulpatel94/cpp-boilerplate-1/badge.svg?branch=master)](https://coveralls.io/github/nakulpatel94/cpp-boilerplate-1?branch=master)
 ---
 
+
+Author:  Nakul Patel
+
+
+
 ## Overview
 
 Simple starter C++ project with:
