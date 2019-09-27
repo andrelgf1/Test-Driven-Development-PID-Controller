@@ -3,6 +3,5 @@
 
 int main()
 {
-    dummy();
-    return 0;
+  return 0;
 }
