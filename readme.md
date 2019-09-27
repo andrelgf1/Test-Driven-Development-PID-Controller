@@ -9,7 +9,6 @@ Driver - Nakul Patel
 Navigator - Andre Luiz Gomes Ferreira
 
 
-
 ## Overview
 
 Simple starter C++ project with:
