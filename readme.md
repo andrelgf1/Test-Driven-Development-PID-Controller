@@ -20,7 +20,7 @@ Week5 Exercise for test driven development for PID controller:
 
 ## Standard install via command-line
 ```
-git clone --recursive https://github.com/nakulpatel94/Test-Driven-Development-PID-Controller
+git clone --recursive https://github.com/nakulpatel94/Test-Driven-Development-PID-Controller.git
 cd <path to repository>
 mkdir build
 cd build
@@ -47,7 +47,7 @@ In your Eclipse workspace directory (or create a new one), checkout the repo (an
 ```
 mkdir -p ~/workspace
 cd ~/workspace
-git clone --recursive https://github.com/dpiet/cpp-boilerplate
+git clone --recursive https://github.com/nakulpatel94/Test-Driven-Development-PID-Controller.git
 ```
 
 In your work directory, use cmake to create an Eclipse project for an [out-of-source build] of cpp-boilerplate
