@@ -1,7 +1,7 @@
 /**
  * Copyright (C)
- * 2019 - Nakul Patel
- *
+ * 2019 - Nakul Patel and Andre Ferreira
+ * 
  */
 
 /**
