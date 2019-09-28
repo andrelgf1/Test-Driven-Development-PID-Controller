@@ -1,0 +1,21 @@
+
+
+On running the cpplint command as follows:  
+
+
+Command:
+
+cpplint $( find . -name \*.hpp -or -name \*.cpp | grep -vE -e "^./build/" -e "^./vendor/" -e "^./docs/" -e "^./results" )
+
+
+
+
+Output:
+
+Done processing ./test/main.cpp
+Done processing ./test/PidControllerTest.cpp
+Done processing ./app/main.cpp
+Done processing ./app/PidController.cpp
+Done processing ./include/PidController.hpp
+
+

@@ -7,7 +7,7 @@
 /**
  * @file main.cpp
  *
- * @author Nakul Patel
+ * @author Part1: Nakul Patel(Driver)  Andre Ferreira(Navigator)
  *
  * @brief driver program for a simple PID controller
  *
@@ -29,7 +29,6 @@
  *
  * @return 0
  */
-int main()
-{
+int main() {
   return 0;
 }

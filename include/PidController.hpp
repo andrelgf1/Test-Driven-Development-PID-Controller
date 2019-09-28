@@ -7,7 +7,7 @@
 /**
  * @file PidController.hpp
  *
- * @author Nakul Patel
+ * @author Part1: Nakul Patel(Driver)  Andre Ferreira(Navigator)
  *
  * @brief declaration for PidController class
  *
@@ -47,18 +47,19 @@ class PidController {
    *
    * @brief parameterized constructor to initialize the private members
    *
-   * @param kpvalue variable for initializing the member kp
+   * @param kpValue variable for initializing the member kp
    *
-   * @param kivalue variable for initializing the member ki
+   * @param kiValue variable for initializing the member ki
    *
-   * @param kdvalue variable for initializing the member kd
+   * @param kdValue variable for initializing the member kd
    *
-   * @param dt variable for initializing the member dt
+   * @param dtValue variable for initializing the member dt
    *
    * @return none
    *
    */
-  PidController(double kpvalue, double kivalue, double kdvalue, double dt);
+  PidController(double kpValue, double kiValue, double kdValue, double dtValue);
+
 
   /**
    * @brief method to calculate  the output velocity
@@ -71,6 +72,17 @@ class PidController {
    *
    */
   double computeVelocity(double targetSetpoint, double actualVelocity);
+
+
+  /**
+   * @brief method to change  the time interval
+   *
+   * @param newDtValue variable for new dt value
+   *
+   * @return double - new value of dt
+   *
+   */
+  double changeTimeInterval(double newDtValue);
 };
 
 

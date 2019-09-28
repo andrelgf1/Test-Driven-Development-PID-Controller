@@ -1,13 +1,50 @@
+/**
+ * Copyright (C)
+ * 2019 - Nakul Patel
+ *
+ */
+
+/**
+ * @file PidControllerTest.cpp
+ *
+ * @author Part1: Nakul Patel(Driver)  Andre Ferreira(Navigator)
+ *
+ * @brief test cases (Google Test framework) for PidController class
+ *
+ * @version 1
+ *
+ * @date 2019-09-27
+ *
+ * This .cpp file has test cases definitions for the class methods
+ * of PidController class
+ *
+ */
+
 #include <gtest/gtest.h>
-#include <PidController.hpp>
-#include <memory>
 #include <iostream>
+#include "PidController.hpp"
 
-TEST(PidControllerTest, testComputePidMethod) {
-  std::shared_ptr<PidController> pid = std::make_shared<PidController>();
-  EXPECT_EQ(1, 2);
+/**
+ *@brief Unit Test for testing computeVelocity() method
+ *
+ *This test checks if the return value of the method is 20.0
+ *
+ */
+TEST(PidControllerTest, testComputeVelocityMethod) {
+  PidController pidObject(0.9, 0.001, 0.001, 0.2);
+  EXPECT_NEAR(pidObject.computeVelocity(20.0, 5.0), 20.0, 0.1);
 }
 
-TEST(PidController1Test, testComputePidMethod1) {
-  EXPECT_EQ(1, 1);
+/**
+ *@brief Unit Test for testing computeVelocity() method
+ *
+ *
+ *
+ */
+TEST(PidControllerTest, testChangeParameterMethod) {
+  PidController pidNewObject(0.9, 0.001, 0.001, 0.2);
+  EXPECT_EQ(pidNewObject.changeTimeInterval(5.0), 5.0);
 }
+
+
+
