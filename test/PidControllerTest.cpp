@@ -27,7 +27,8 @@
 /**
  *@brief Unit Test for testing computeVelocity() method
  *
- *This test checks if the return value of the method is 20.0
+ *This test checks if the return value of the method is near 
+ *the range of 0.1 from 20.0
  *
  */
 TEST(PidControllerTest, testComputeVelocityMethod) {
@@ -36,14 +37,15 @@ TEST(PidControllerTest, testComputeVelocityMethod) {
 }
 
 /**
- *@brief Unit Test for testing computeVelocity() method
+ *@brief Unit Test for testing changeTimeInterval() method
  *
- *
+ *This test checks if the value of variable dt 
+ *was changed to 0.5, after passing the new time interval  
  *
  */
 TEST(PidControllerTest, testChangeParameterMethod) {
   PidController pidNewObject(0.9, 0.001, 0.001, 0.2);
-  EXPECT_EQ(pidNewObject.changeTimeInterval(5.0), 5.0);
+  EXPECT_EQ(pidNewObject.changeTimeInterval(0.5), 0.5);
 }
 
 
