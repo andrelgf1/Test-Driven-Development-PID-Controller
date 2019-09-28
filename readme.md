@@ -13,7 +13,7 @@ Navigator - Andre Luiz Gomes Ferreira
 
 ## Overview
 
-Week5 Exercise for test driven development for PID controller:
+Week5 Exercise for the Test Driven Development for PID controller:
 
 - cmake
 - googletest
@@ -50,13 +50,13 @@ cd ~/workspace
 git clone --recursive https://github.com/nakulpatel94/Test-Driven-Development-PID-Controller.git
 ```
 
-In your work directory, use cmake to create an Eclipse project for an [out-of-source build] of cpp-boilerplate
+In your work directory, use cmake to create an Eclipse project for an [out-of-source build] of Test-Driven-Development-PID-Controller
 
 ```
 cd ~/workspace
 mkdir -p boilerplate-eclipse
 cd boilerplate-eclipse
-cmake -G "Eclipse CDT4 - Unix Makefiles" -D CMAKE_BUILD_TYPE=Debug -D CMAKE_ECLIPSE_VERSION=4.7.0 -D CMAKE_CXX_COMPILER_ARG1=-std=c++14 ../cpp-boilerplate/
+cmake -G "Eclipse CDT4 - Unix Makefiles" -D CMAKE_BUILD_TYPE=Debug -D CMAKE_ECLIPSE_VERSION=4.7.0 -D CMAKE_CXX_COMPILER_ARG1=-std=c++14 ../Test-Driven-Development-PID-Controller/
 ```
 
 ## Import

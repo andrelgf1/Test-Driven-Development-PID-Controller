@@ -53,7 +53,7 @@ PidController::PidController(double kpValue, double kiValue, double kdValue,
  *
  * @param actualVelocity variable for actual velocity
  *
- * @return output velocity of type double
+ * @return double - output velocity
  *
  */
 double PidController::computeVelocity(double targetSetpoint,

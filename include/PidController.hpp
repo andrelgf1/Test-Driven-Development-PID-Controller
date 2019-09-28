@@ -68,7 +68,7 @@ class PidController {
    *
    * @param actualVelocity variable for actual velocity
    *
-   * @return output velocity of type double
+   * @return double - output velocity
    *
    */
   double computeVelocity(double targetSetpoint, double actualVelocity);
