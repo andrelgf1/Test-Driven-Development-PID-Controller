@@ -10,6 +10,10 @@ Part 1:
 Driver - Nakul Patel
 Navigator - Andre Luiz Gomes Ferreira
 
+Part 2:
+Driver: Eashwar Sathyamurthy
+Navigator: Sri Manika Makam
+
 
 ## Overview
 
