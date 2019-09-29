@@ -8,6 +8,7 @@
  * @file PidController.hpp
  *
  * @author Part1: Nakul Patel(Driver)  Andre Ferreira(Navigator)
+ * @author Part2: Eashwar Sathyamurthy(Driver) Sri Manika Makam(Navigator)
  *
  * @brief declaration for PidController class
  *

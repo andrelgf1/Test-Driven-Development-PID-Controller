@@ -8,6 +8,7 @@
  * @file main.cpp
  *
  * @author Part1: Nakul Patel(Driver)  Andre Ferreira(Navigator)
+ * @author Part2: Eashwar Sathyamurthy(Driver) Sri Manika Makam(Navigator)
  *
  * @brief unit test for PidController class
  *

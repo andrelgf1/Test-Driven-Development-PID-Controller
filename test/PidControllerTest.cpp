@@ -8,6 +8,7 @@
  * @file PidControllerTest.cpp
  *
  * @author Part1: Nakul Patel(Driver)  Andre Ferreira(Navigator)
+ * @author Part2: Eashwar Sathyamurthy(Driver) Sri Manika Makam(Navigator)
  *
  * @brief test cases (Google Test framework) for PidController class
  *
