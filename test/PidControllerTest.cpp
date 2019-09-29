@@ -48,5 +48,3 @@ TEST(PidControllerTest, testChangeParameterMethod) {
   EXPECT_EQ(pidNewObject.changeTimeInterval(0.5), 0.5);
 }
 
-
-

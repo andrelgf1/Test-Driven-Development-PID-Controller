@@ -60,7 +60,6 @@ class PidController {
    */
   PidController(double kpValue, double kiValue, double kdValue, double dtValue);
 
-
   /**
    * @brief method to calculate  the output velocity
    *
@@ -73,7 +72,6 @@ class PidController {
    */
   double computeVelocity(double targetSetpoint, double actualVelocity);
 
-
   /**
    * @brief method to change  the time interval
    *
@@ -84,7 +82,4 @@ class PidController {
    */
   double changeTimeInterval(double newDtValue);
 };
-
-
-
 

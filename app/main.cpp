@@ -23,7 +23,6 @@
 #include <iostream>
 #include "PidController.hpp"
 
-
 /**
  * @brief Main function
  *

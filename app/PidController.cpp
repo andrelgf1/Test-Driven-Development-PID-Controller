@@ -57,19 +57,19 @@ PidController::PidController(double kpValue, double kiValue, double kdValue,
  */
 double PidController::computeVelocity(double targetSetpoint,
                                       double actualVelocity) {
-  double error, errorPrevious, integrator = 0, d, output;
-  while (1) {
+  double error, errorPrevious = 0, integral = 0, derivative, output, count = 0;
+  while (count < 500000) {
     error = targetSetpoint - actualVelocity;
-    integrator = integrator + (error * dt);
-    d = (error - errorPrevious) / dt;
-    output = kp * error + ki * integrator + kd * d;
+    integral = integral + (error * dt);
+    derivative = (error - errorPrevious) / dt;
+    output = kp * error + ki * integral + kd * derivative;
     errorPrevious = error;
-    if (targetSetpoint - 0.1 < output && output < targetSetpoint + 0.1) {
+    if (targetSetpoint - 0.1 < output && output < targetSetpoint + 0.1)
       break;
     actualVelocity = output;
-    }
+    count++;
   }
-    return output;
+  return output;
 }
 
 /**
