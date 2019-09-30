@@ -27,9 +27,11 @@ Week5 Exercise for the Test Driven Development for PID controller:
 
 After the implementation of part 2, there were no build errors.
 
-Coverage was 96.15% for this repository after the first successful build. Then, we analyzed the code and made few changes to achieve 96.296% code coverage. We had to compromise on the code coverage because our code includes snippets which avoids the program to go to infinite loop.
+Coverage was 100% for this repository after the first successful build. But we had to add a code snippet which avoids the program to go to infinite loop, as mentioned in the UML diagram provided by part 1 team. That part of the code was not being used while running the program and there were no test cases to check it. So, after the changes were made, we achieved code coverage of 96.296%. 
 
-Currently, the two tests check the functions in the class. First test will test compute method by assigning random values and the second test will initialize a new value for the time interval.
+Currently, the given two tests check the functions in the class. First test will test the compute method and the second test checks the method that initializes a new value for the time interval.
+
+The implementation of the class satisfies the given class design and successfully passes all the unit tests.
 
 
 ## Standard install via command-line
