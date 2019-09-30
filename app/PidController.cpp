@@ -56,6 +56,9 @@ double PidController::computeVelocity(double targetSetpoint,
     error = targetSetpoint - actualVelocity;
     derivative = (error - errorPrevious) / dt;
   }
+  /// This message will be displayed when loop completes 500000 iterations
+  if (count == 500000)
+    std::cout << "Maximum variations Achieved" << std::endl;
   return output;
 }
 
