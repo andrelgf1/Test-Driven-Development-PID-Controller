@@ -8,6 +8,7 @@
  * @file PidController.cpp
  *
  * @author Part1: Nakul Patel(Driver)  Andre Ferreira(Navigator)
+ * @author Part2: Eashwar Sathyamurthy(Driver) Sri Manika Makam(Navigator)
  *
  * @brief cpp program for definition and implementation of the methods of
  *        PidController class
@@ -45,7 +46,6 @@ PidController::PidController(double kpValue, double kiValue, double kdValue,
   dt = dtValue;
 }
 
-
 /**
  * @brief method to calculate  the output velocity
  *
@@ -58,7 +58,27 @@ PidController::PidController(double kpValue, double kiValue, double kdValue,
  */
 double PidController::computeVelocity(double targetSetpoint,
                                       double actualVelocity) {
-  return 0.0;
+  /// Declaring variables
+  double error = targetSetpoint - actualVelocity, errorPrevious = 0;
+  double integral = 0, output, count = 0;
+  double derivative = (error - errorPrevious) / dt;
+  /// This will prevent infinite repetition of the loop
+  while (count < 500000) {
+    integral = integral + (error * dt);
+    /// Calculating new Velocity
+    output = kp * error + ki * integral + kd * derivative;
+    /// updating previous error
+    errorPrevious = error;
+    if (targetSetpoint - 0.1 < output && output < targetSetpoint + 0.1)
+      break;
+    ///  Applying feedback to actual velocity by updating it with output
+    actualVelocity = output;
+    count++;
+    /// Calculating error after feedback
+    error = targetSetpoint - actualVelocity;
+    derivative = (error - errorPrevious) / dt;
+  }
+  return output;
 }
 
 /**
@@ -70,5 +90,7 @@ double PidController::computeVelocity(double targetSetpoint,
  *
  */
 double PidController::changeTimeInterval(double newDtValue) {
-  return 1.0;
+  /// Initializing time interval
+  dt = newDtValue;
+  return dt;
 }

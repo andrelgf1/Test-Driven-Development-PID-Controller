@@ -1,6 +1,6 @@
 # Week5-Test-Driven-Development
-[![Build Status](https://travis-ci.org/nakulpatel94/Test-Driven-Development-PID-Controller.svg?branch=master)](https://travis-ci.org/nakulpatel94/Test-Driven-Development-PID-Controller)
-[![Coverage Status](https://coveralls.io/repos/github/nakulpatel94/Test-Driven-Development-PID-Controller/badge.svg?branch=master)](https://coveralls.io/github/nakulpatel94/Test-Driven-Development-PID-Controller?branch=master)
+[![Build Status](https://travis-ci.org/Eashwar-S/Test-Driven-Development-PID-Controller.svg?branch=master)](https://travis-ci.org/Eashwar-S/Test-Driven-Development-PID-Controller)
+[![Coverage Status](https://coveralls.io/repos/github/Eashwar-S/Test-Driven-Development-PID-Controller/badge.svg?branch=master)](https://coveralls.io/github/Eashwar-S/Test-Driven-Development-PID-Controller?branch=master)
 ---
 
 
@@ -9,6 +9,10 @@ Test Driven Development
 Part 1:
 Driver - Nakul Patel
 Navigator - Andre Luiz Gomes Ferreira
+
+Part 2:
+Driver: Eashwar Sathyamurthy
+Navigator: Sri Manika Makam
 
 
 ## Overview

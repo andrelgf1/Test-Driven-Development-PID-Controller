@@ -8,6 +8,7 @@
  * @file PidController.hpp
  *
  * @author Part1: Nakul Patel(Driver)  Andre Ferreira(Navigator)
+ * @author Part2: Eashwar Sathyamurthy(Driver) Sri Manika Makam(Navigator)
  *
  * @brief declaration for PidController class
  *
@@ -60,7 +61,6 @@ class PidController {
    */
   PidController(double kpValue, double kiValue, double kdValue, double dtValue);
 
-
   /**
    * @brief method to calculate  the output velocity
    *
@@ -73,7 +73,6 @@ class PidController {
    */
   double computeVelocity(double targetSetpoint, double actualVelocity);
 
-
   /**
    * @brief method to change  the time interval
    *
@@ -84,7 +83,4 @@ class PidController {
    */
   double changeTimeInterval(double newDtValue);
 };
-
-
-
 

@@ -8,6 +8,7 @@
  * @file PidControllerTest.cpp
  *
  * @author Part1: Nakul Patel(Driver)  Andre Ferreira(Navigator)
+ * @author Part2: Eashwar Sathyamurthy(Driver) Sri Manika Makam(Navigator)
  *
  * @brief test cases (Google Test framework) for PidController class
  *
@@ -47,6 +48,4 @@ TEST(PidControllerTest, testChangeParameterMethod) {
   PidController pidNewObject(0.9, 0.001, 0.001, 0.2);
   EXPECT_EQ(pidNewObject.changeTimeInterval(0.5), 0.5);
 }
-
-
 
