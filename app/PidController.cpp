@@ -1,7 +1,7 @@
 /**
  * Copyright (C)
  * 2019 - Nakul Patel and Andre Ferreira
- * 
+ *
  */
 
 /**
@@ -24,20 +24,7 @@
 
 #include "PidController.hpp"
 
-/**
- * @brief constructor to set initial values
- *
- * @param kpValue variable for initializing the member kp
- *
- * @param kiValue variable for initializing the member ki
- *
- * @param kdValue variable for initializing the member kd
- *
- * @param dtValue variable for initializing the member dt
- *
- * @return none
- *
- */
+
 PidController::PidController(double kpValue, double kiValue, double kdValue,
                              double dtValue) {
   kp = kpValue;
@@ -46,16 +33,7 @@ PidController::PidController(double kpValue, double kiValue, double kdValue,
   dt = dtValue;
 }
 
-/**
- * @brief method to calculate  the output velocity
- *
- * @param targetSetpoint variable for desired velocity
- *
- * @param actualVelocity variable for actual velocity
- *
- * @return double - output velocity
- *
- */
+
 double PidController::computeVelocity(double targetSetpoint,
                                       double actualVelocity) {
   /// Declaring variables
@@ -81,16 +59,13 @@ double PidController::computeVelocity(double targetSetpoint,
   return output;
 }
 
-/**
- * @brief method to change  the time interval
- *
- * @param newDtValue variable for new dt value
- *
- * @return double - new value of dt
- *
- */
+
 double PidController::changeTimeInterval(double newDtValue) {
   /// Initializing time interval
   dt = newDtValue;
   return dt;
+}
+
+
+PidController::~PidController() {
 }

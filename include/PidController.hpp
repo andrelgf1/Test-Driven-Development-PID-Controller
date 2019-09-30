@@ -82,5 +82,15 @@ class PidController {
    *
    */
   double changeTimeInterval(double newDtValue);
+
+  /**
+   * @brief destructor for class object
+   *
+   * @param none
+   *
+   * @return none
+   *
+   */
+  ~PidController();
 };
 

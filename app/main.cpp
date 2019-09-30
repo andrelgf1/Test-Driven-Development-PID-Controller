@@ -26,7 +26,7 @@
 
 /**
  * @brief Main function
- * @param None
+ * @param none
  * @return 0
  */
 int main() {
