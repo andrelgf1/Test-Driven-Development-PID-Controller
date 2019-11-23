@@ -61,8 +61,8 @@ class PidController {
    *
    */
   PidController();
-  
-  virtual ~PidController()=0;
+
+  virtual ~PidController() = 0;
 
   /**
    * @brief method to calculate  the output velocity
@@ -74,7 +74,8 @@ class PidController {
    * @return double - output velocity
    *
    */
-   virtual double computeVelocity(double targetSetpoint, double actualVelocity)=0;
+  virtual double computeVelocity(double targetSetpoint,
+                                 double actualVelocity) = 0;
 
   /**
    * @brief method to change  the time interval
@@ -84,7 +85,7 @@ class PidController {
    * @return double - new value of dt
    *
    */
-   virtual double changeTimeInterval(double newDtValue)=0;
+  virtual double changeTimeInterval(double newDtValue) = 0;
 
   /**
    * @brief destructor for class object
@@ -94,6 +95,5 @@ class PidController {
    * @return none
    *
    */
-   
 };
 

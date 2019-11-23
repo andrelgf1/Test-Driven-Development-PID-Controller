@@ -32,7 +32,6 @@
  *
  */
 class Pid : public PidController {
-
  public:
   /**
    *
@@ -61,7 +60,7 @@ class Pid : public PidController {
    * @return double - output velocity
    *
    */
-   double computeVelocity(double targetSetpoint, double actualVelocity);
+  double computeVelocity(double targetSetpoint, double actualVelocity);
 
   /**
    * @brief method to change  the time interval
@@ -71,7 +70,7 @@ class Pid : public PidController {
    * @return double - new value of dt
    *
    */
-   double changeTimeInterval(double newDtValue);
+  double changeTimeInterval(double newDtValue);
 
   /**
    * @brief destructor for class object

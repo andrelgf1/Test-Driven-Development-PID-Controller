@@ -28,8 +28,8 @@
 
 class MockPid : public PidController {
  public:
-  MOCK_METHOD2(computeVelocity, double(double,double));
-  MOCK_METHOD1(changeTimeInterval, double(double)); };
+  MOCK_METHOD2(computeVelocity, double(double, double));
+  MOCK_METHOD1(changeTimeInterval, double(double));};
 /**
  *@brief Unit Test for testing computeVelocity() method
  *
@@ -39,7 +39,8 @@ class MockPid : public PidController {
  */
 TEST(PidControllerTest, testComputeVelocityMethod) {
   MockPid pidObject;
-  EXPECT_CALL(pidObject,computeVelocity(20.0, 5.0)).Times(1).WillOnce(::testing::Return(20.0));
+  EXPECT_CALL(pidObject, computeVelocity(20.0, 5.0)).Times(1).WillOnce(
+      ::testing::Return(20.0));
   EXPECT_NEAR(pidObject.computeVelocity(20.0, 5.0), 20.0, 0.1);
 }
 
@@ -52,7 +53,8 @@ TEST(PidControllerTest, testComputeVelocityMethod) {
  */
 TEST(PidControllerTest, testChangeParameterMethod) {
   MockPid pidObject;
-  EXPECT_CALL(pidObject,changeTimeInterval(0.2)).Times(1).WillOnce(::testing::Return(0.2));
-  EXPECT_EQ(pidObject.changeTimeInterval(0.2),0.2);
+  EXPECT_CALL(pidObject, changeTimeInterval(0.2)).Times(1).WillOnce(
+      ::testing::Return(0.2));
+  EXPECT_EQ(pidObject.changeTimeInterval(0.2), 0.2);
 }
 
