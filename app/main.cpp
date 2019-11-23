@@ -23,6 +23,7 @@
 
 #include <iostream>
 #include "PidController.hpp"
+#include "Pid.hpp"
 
 /**
  * @brief Main function
@@ -31,7 +32,7 @@
  */
 int main() {
   /// Initializing constructor with the input values of kp ki kd dt
-  PidController pid(0.9, 0.001, 0.001, 0.2);
+  Pid pid;
   /// Calling computeVelocity() method
   double newVelocity = pid.computeVelocity(20.0, 5.0);
   std::cout << "The new velocity closer is: " << newVelocity <<std::endl;
