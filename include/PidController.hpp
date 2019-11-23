@@ -31,6 +31,7 @@
  *
  */
 class PidController {
+ protected:
   /// proportional gain
   double kp;
 
@@ -59,7 +60,9 @@ class PidController {
    * @return none
    *
    */
-  PidController(double kpValue, double kiValue, double kdValue, double dtValue);
+  PidController();
+  
+  virtual ~PidController()=0;
 
   /**
    * @brief method to calculate  the output velocity
@@ -71,7 +74,7 @@ class PidController {
    * @return double - output velocity
    *
    */
-  double computeVelocity(double targetSetpoint, double actualVelocity);
+   virtual double computeVelocity(double targetSetpoint, double actualVelocity)=0;
 
   /**
    * @brief method to change  the time interval
@@ -81,7 +84,7 @@ class PidController {
    * @return double - new value of dt
    *
    */
-  double changeTimeInterval(double newDtValue);
+   virtual double changeTimeInterval(double newDtValue)=0;
 
   /**
    * @brief destructor for class object
@@ -91,6 +94,6 @@ class PidController {
    * @return none
    *
    */
-  ~PidController();
+   
 };
 
