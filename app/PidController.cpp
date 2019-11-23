@@ -25,50 +25,16 @@
 #include "PidController.hpp"
 
 
-PidController::PidController(double kpValue, double kiValue, double kdValue,
-                             double dtValue) {
-  kp = kpValue;
-  ki = kiValue;
-  kd = kdValue;
-  dt = dtValue;
+PidController::PidController() {
+  kp = 0.9;
+  ki = 0.001;
+  kd = 0.001;
+  dt = 0.2;
 }
-
-
-double PidController::computeVelocity(double targetSetpoint,
-                                      double actualVelocity) {
-  /// Declaring variables
-  double error = targetSetpoint - actualVelocity, errorPrevious = 0;
-  double integral = 0, output, count = 0;
-  double derivative = (error - errorPrevious) / dt;
-  /// This will prevent infinite repetition of the loop
-  while (count < 500000) {
-    integral = integral + (error * dt);
-    /// Calculating new Velocity
-    output = kp * error + ki * integral + kd * derivative;
-    /// updating previous error
-    errorPrevious = error;
-    if (targetSetpoint - 0.1 < output && output < targetSetpoint + 0.1)
-      break;
-    ///  Applying feedback to actual velocity by updating it with output
-    actualVelocity = output;
-    count++;
-    /// Calculating error after feedback
-    error = targetSetpoint - actualVelocity;
-    derivative = (error - errorPrevious) / dt;
-  }
-  /// This message will be displayed when loop completes 500000 iterations
-  if (count == 500000)
-    std::cout << "Maximum variations Achieved" << std::endl;
-  return output;
-}
-
-
-double PidController::changeTimeInterval(double newDtValue) {
-  /// Initializing time interval
-  dt = newDtValue;
-  return dt;
-}
-
 
 PidController::~PidController() {
 }
+
+
+
+
