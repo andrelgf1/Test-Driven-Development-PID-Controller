@@ -22,9 +22,14 @@
  */
 
 #include <gtest/gtest.h>
+#include <gmock/gmock.h>
 #include <iostream>
-#include "PidController.hpp"
+#include "Pid.hpp"
 
+class MockPid : public PidController {
+ public:
+  MOCK_METHOD2(computeVelocity, double(double,double));
+  MOCK_METHOD1(changeTimeInterval, double(double)); };
 /**
  *@brief Unit Test for testing computeVelocity() method
  *
@@ -33,7 +38,8 @@
  *
  */
 TEST(PidControllerTest, testComputeVelocityMethod) {
-  PidController pidObject(0.9, 0.001, 0.001, 0.2);
+  MockPid pidObject;
+  EXPECT_CALL(pidObject,computeVelocity(20.0, 5.0)).Times(1).WillOnce(::testing::Return(20.0));
   EXPECT_NEAR(pidObject.computeVelocity(20.0, 5.0), 20.0, 0.1);
 }
 
@@ -45,7 +51,8 @@ TEST(PidControllerTest, testComputeVelocityMethod) {
  *
  */
 TEST(PidControllerTest, testChangeParameterMethod) {
-  PidController pidNewObject(0.9, 0.001, 0.001, 0.2);
-  EXPECT_EQ(pidNewObject.changeTimeInterval(0.5), 0.5);
+  MockPid pidObject;
+  EXPECT_CALL(pidObject,changeTimeInterval(0.2)).Times(1).WillOnce(::testing::Return(0.2));
+  EXPECT_EQ(pidObject.changeTimeInterval(0.2),0.2);
 }
 
