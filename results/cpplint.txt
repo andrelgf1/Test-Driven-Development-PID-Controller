@@ -15,9 +15,12 @@ Output:
 
 Done processing ./test/main.cpp
 Done processing ./test/PidControllerTest.cpp
-Done processing ./app/main.cpp
-Done processing ./app/PidController.cpp
 Done processing ./include/PidController.hpp
+Done processing ./include/Pid.hpp
+Done processing ./app/Pid.cpp
+Done processing ./app/PidController.cpp
+Done processing ./app/main.cpp
+
 
 
 
