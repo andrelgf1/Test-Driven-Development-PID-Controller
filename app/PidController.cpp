@@ -26,6 +26,7 @@
 
 
 PidController::PidController() {
+  // Initializing private parameters
   kp = 0.9;
   ki = 0.001;
   kd = 0.001;

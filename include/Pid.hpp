@@ -5,7 +5,7 @@
  */
 
 /**
- * @file PidController.hpp
+ * @file Pid.hpp
  *
  * @author Part1: Nakul Patel(Driver)  Andre Ferreira(Navigator)
  * @author Part2: Eashwar Sathyamurthy(Driver) Sri Manika Makam(Navigator)
@@ -28,22 +28,14 @@
 
 /**
  *
- * @brief declaration of PidController class
+ * @brief declaration of Pid inheririted  class
  *
  */
 class Pid : public PidController {
  public:
   /**
    *
-   * @brief parameterized constructor to initialize the private members
-   *
-   * @param kpValue variable for initializing the member kp
-   *
-   * @param kiValue variable for initializing the member ki
-   *
-   * @param kdValue variable for initializing the member kd
-   *
-   * @param dtValue variable for initializing the member dt
+   * @brief constructor to initialize the private members
    *
    * @return none
    *

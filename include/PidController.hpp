@@ -49,23 +49,22 @@ class PidController {
    *
    * @brief parameterized constructor to initialize the private members
    *
-   * @param kpValue variable for initializing the member kp
-   *
-   * @param kiValue variable for initializing the member ki
-   *
-   * @param kdValue variable for initializing the member kd
-   *
-   * @param dtValue variable for initializing the member dt
-   *
    * @return none
    *
    */
   PidController();
+  /**
+   *
+   * @brief Virtual destructor
+   *
+   * @return none
+   *
+   */
 
   virtual ~PidController() = 0;
 
   /**
-   * @brief method to calculate  the output velocity
+   * @brief Virtual computeVelocity method 
    *
    * @param targetSetpoint variable for desired velocity
    *
@@ -78,7 +77,7 @@ class PidController {
                                  double actualVelocity) = 0;
 
   /**
-   * @brief method to change  the time interval
+   * @brief  Virtual method changeTimeInterval
    *
    * @param newDtValue variable for new dt value
    *

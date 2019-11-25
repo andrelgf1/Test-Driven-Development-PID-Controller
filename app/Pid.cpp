@@ -27,6 +27,7 @@
 
 
 Pid::Pid() {
+  // Initializing private parameter values
   kp = 0.9;
   ki = 0.001;
   kd = 0.001;
